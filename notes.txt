@@ -1,0 +1,14 @@
+VS CODE-Visual Studio Code - Microsoft
+after opening vscode,
+go to file->add folder to workspace->then add folder
+
+CSS ->How to use CSS?
+1.Inline
+2.internal
+3.external
+
+Selectors:
+1.* - universal selector - >All
+2. .-class - ek property multiple tags pe lagani hai to aap class ka use karenge
+3. # - id - one id per tag
+google fonts

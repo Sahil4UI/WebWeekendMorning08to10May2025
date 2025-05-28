@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cube {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            animation: cube 10s linear infinite;
+            margin: 100px auto 0 auto;
+            transform-style: preserve-3d;
+        }
+        @keyframes cube{
+            0%{
+                transform: rotate3d(0,0,0,0deg);
+            }
+            100%{
+                transform: rotate3d(1,1,1,360deg);
+            }
+        }
+        #cube div{
+            width: 100%;
+            height: 100%;
+            /* 0-255 */
+            /* rgb - red green blue a- alpha - opacity */
+            background-color: rgba(0,0,0,0.5);
+            border: 1px solid red;
+            position: absolute;
+            font-size:30px;
+            color: white;
+        }
+        .top{
+            transform-origin: top;
+            transform: rotateX(90deg);
+            background-image: url("https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg");
+            background-size: 100% 100%;
+        }
+        .front{
+            transform: translateZ(150px);
+        }
+        .bottom{
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+        .left{
+            transform-origin: left;
+            transform: rotateY(-90deg);
+        }
+        .right{
+            transform-origin: right;
+            transform: rotateY(90deg);
+        }
+        #cube:hover{
+            animation-play-state: paused;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Cube -  faces -->
+    <div id="cube">
+        <div class="front">FRONT</div>
+        <div class="back">BACK</div>
+        <div class="top">TOP</div>
+        <div class="bottom">BOTTOM</div>
+        <div class="left">LEFT</div>
+        <div class="right">RIGHT</div>
+    </div>
+</body>
+</html>
